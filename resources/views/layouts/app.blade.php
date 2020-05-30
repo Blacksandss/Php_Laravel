@@ -10,7 +10,7 @@
 </head>
 <body>
   @include('include.header')
-#TEST_UNDO
+
 @if(Request::is('/'))
   @include('include.hero')
 @endif
