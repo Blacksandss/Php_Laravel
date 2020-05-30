@@ -7,6 +7,17 @@
 @section('content')
 <h1>Контакты</h1>
 
+@if($errors->any())
+<div class="alert alert-danger"
+<ul>
+  @foreach($errors->all() as $error)
+  <li>{{ $error  }}</li>
+  @endforeach
+</ul>
+</div>
+@endif
+
+
 <form action="{{ route('contact-form') }}" method="post">
 
 @csrf
@@ -17,7 +28,7 @@
   </div>
 
   <div class="form-group">
-    <label for="email">Введите имя</label>
+    <label for="email">Введите email</label>
     <input type="text" name="email" placeholder="Введите email" id="email" class="form-control">
   </div>
 
