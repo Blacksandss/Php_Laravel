@@ -7,6 +7,7 @@
 @section('content')
 <h1>Контакты</h1>
 
+{{--комментарий blade
 @if($errors->any())
 <div class="alert alert-danger"
 <ul>
@@ -16,7 +17,7 @@
 </ul>
 </div>
 @endif
-
+конец--}}
 
 <form action="{{ route('contact-form') }}" method="post">
 
